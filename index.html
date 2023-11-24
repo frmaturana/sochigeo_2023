@@ -1101,42 +1101,39 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
       .style("pointer-events", "none");
 
     svg.append("text")
-      .html("Autores:")
+      .text("Autores:")
       .style("font-size", "12px")
       .style("font-weight", "bold")
       .attr("x", 20)
       .attr("y", 80+600);
 
     svg.append("text")
-      .html("Francisco Maturana")
+      .text("Francisco Maturana")
       .style("font-size", "10px")
       .attr("x", 20)
       .attr("y", 100+600);
     
     svg.append("text")
-      .html("Roberto Salas")
+      .text("Roberto Salas")
       .style("font-size", "10px")
       .attr("x", 20)
       .attr("y", 115+600);
 
     svg.append("text")
-      .html("José Astroza")
-            .style("font-size", "10px")
-
+      .text("José Astroza")
+      .style("font-size", "10px")
       .attr("x", 20)
       .attr("y", 130+600);
 
     svg.append("text")
-      .html("Agustín Brito")
-            .style("font-size", "10px")
-
+      .text("Agustín Brito")
+      .style("font-size", "10px")
       .attr("x", 20)
       .attr("y", 145+600);
 
     svg.append("text")
-      .html("Francisco Vidal")
-            .style("font-size", "10px")
-
+      .text("Francisco Vidal")
+      .style("font-size", "10px")
       .attr("x", 20)
       .attr("y", 160+600);
 
@@ -1215,6 +1212,10 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
       return eval(options.clickAction)
     }
 
+    svg.append('text')
+    .attr('x', legendRectSize + legendSpacing)
+    .attr('y', legendRectSize - legendSpacing)
+
     // add legend option
     if(options.legend){
         var legendRectSize = 18;
@@ -1241,7 +1242,8 @@ return function(){for(var n=0,e=0;e<t;++e)n+=Math.random();return n}},um=functio
         legend.append('text')
           .attr('x', legendRectSize + legendSpacing)
           .attr('y', legendRectSize - legendSpacing)
-          .text(function(d) { return d; });
+          .text(function(d) { return d; })
+          .style("font-size", "12px");
 
 
     }
